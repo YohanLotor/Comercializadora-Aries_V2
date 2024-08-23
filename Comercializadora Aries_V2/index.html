@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="css/estilosprincipal.css">
+    <link rel="stylesheet" href="semantic-ui/semantic.css">
+    <style>
+        /* Incluye el CSS modificado aquí o en un archivo separado */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logoAries.png" alt="Logo de la empresa">
+        </div>
+        <div class="nav-container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="Politicas.html">Políticas</a></li>
+                    <li><a href="sesion.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Imagen Presentadora -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>¡Bienvenidos a Grupo Comercial Aries!</h1>
+            <div class="video-container">
+                <video autoplay controls  muted loop>
+                    <source src="video/mantenimiento.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información rápida de la Empresa -->
+    <section class="about">
+        <div class="about-content">
+            <h2>Empresa 100% Mexicana con 20 años de experiencia</h2>
+            <p>Reparaciones genuinas de buena calidad directas del fabricante</p>
+            <p>(Lavadoras, refrigeradores, etc) Para todas las marcas del mercado</p>
+            <br>
+            <br>
+            <h2>Nuestros socios</h2>
+        </div>
+    </section>
+    
+    <!-- Carrusel de Imágenes de Socios -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/koblenz.png" alt="Socio 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/phillips.png" alt="Socio 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/daevoo.png" alt="Socio 3">
+            </div>
+            <!-- Agrega más slides si es necesario -->
+        </div>
+        <button class="carousel-prev">&#10094;</button>
+        <button class="carousel-next">&#10095;</button>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="ui fluid form">
+                <div class="Three fields">
+                    <div class="field">
+                
+                    </div>
+                    <div class="field">
+                        <i class="huge facebook icon" style="color: azure;"></i>
+                        <i class="huge instagram icon"></i>
+                        <i class="huge twitter icon"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="address">
+                <p>Blvd. Jardines Mz.54 Lt.5 #1, Los Héroes Tecámac II. Tecámac, Estado de México.</p>
+            </div>
+            <br>
+            <div class="company-name">
+                <p>Grupo Comercial Aries 2024®</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prevButton = document.querySelector('.carousel-prev');
+            const nextButton = document.querySelector('.carousel-next');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else {
+                    currentIndex = index;
+                }
+                document.querySelector('.carousel-container').style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            prevButton.addEventListener('click', () => {
+                showSlide(currentIndex - 1);
+            });
+
+            nextButton.addEventListener('click', () => {
+                showSlide(currentIndex + 1);
+            });
+
+            // Opcional: Auto-rotación
+            setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 5000); // Cambia cada 5 segundos
+        });
+    </script>
+</body>
+</html>

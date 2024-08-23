@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="css/estilosprincipal.css">
+    <link rel="stylesheet" href="semantic-ui/semantic.css">
+    <style>
+        .login-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logoAries.png" alt="Logo de la empresa">
+        </div>
+        <div class="nav-container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="Politicas.html">Políticas</a></li>
+                    <li><a href="#">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Imagen Presentadora -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Iniciar Sesión</h1>
+            <div class="form-container">
+                <form action="procesar_login.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btnAcceder">Acceder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="social-media">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+            </div> -->
+            <div class="ui fluid form">
+                <div class="Three fields">
+                    <div class="field">
+                    </div>
+                    <div class="field">
+
+                        <i class="huge facebook icon" style="color: azure;"></i>
+                        <i class="huge instagram  icon"></i>
+                        <i class="huge twitter icon"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="address">
+                <p>Blvd. Jardines Mz.54 Lt.5 #1, Los Héroes Tecámac II. Tecámac, Estado de México.</p>
+            </div>
+            <br>
+            <div class="company-name">
+                <p>Grupo Comercial Aries 2024®</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
